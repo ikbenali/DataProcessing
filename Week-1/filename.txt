@@ -1,1 +1,1 @@
-lol
+An branch within github is to allow the user to create another enviroment for a certain project without influencing the current "master" project. This allows the user to add new ideas and implement new or experimental feature without affecting the source code
