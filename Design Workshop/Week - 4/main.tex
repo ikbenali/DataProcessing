@@ -1,0 +1,82 @@
+\documentclass[10pt, a4paper, oneside, headinclude,footinclude]{scrartcl}
+
+\usepackage[nochapters, beramono, eulermath, pdfspacing, dottedtoc]{classicthesis} 
+\usepackage{arsclassica} 
+\usepackage[T1]{fontenc} 
+\usepackage[utf8]{inputenc} 
+\usepackage{graphicx} 
+
+\graphicspath{{Figures/}}
+
+\usepackage{enumitem} 
+\usepackage{subfig} 
+\usepackage{amsmath,amssymb,amsthm} 
+\usepackage{lipsum} 
+\usepackage{varioref} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% SETTINGS DOCUMENT
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setcounter{tocdepth}{2} 
+\renewcommand{\refname}{\spacedlowsmallcaps{References}} % For modifying the bibliography heading
+\bibliographystyle{unsrt}
+
+
+    %   THEOREM STYLES
+
+\theoremstyle{definition} % Define theorem styles here based on the definition style (used for definitions and examples)
+\newtheorem{definition}{Definition}
+\theoremstyle{plain} 
+\newtheorem{theorem}{Theorem}
+\theoremstyle{remark} % Define theorem styles here based on the remark style (used for remarks and notes)
+
+    %   HYPERLINKS
+
+\hypersetup{
+colorlinks=true, breaklinks=true, bookmarks=true,bookmarksnumbered,
+urlcolor=webbrown, linkcolor=RoyalBlue, citecolor=webgreen, % Link colors
+pdftitle={}, % PDF title
+pdfauthor={\textcopyright}, % PDF Author
+pdfsubject={}, % PDF Subject
+pdfkeywords={}, % PDF Keywords
+pdfcreator={pdfLaTeX}, % PDF Creator
+pdfproducer={LaTeX with hyperref and ClassicThesis} % PDF producer
+}
+\hyphenation{Fortran hy-phen-ation} 
+
+    %	TITLE AND AUTHOR(S)
+
+\title{\normalfont\spacedallcaps{Article Title}} % The article title
+\author{\spacedlowsmallcaps{Ali Ul Haq\textsuperscript{1}}} % The article author(s) - author affiliations need to be specified in the AUTHOR AFFILIATIONS block
+\date{Month XXth 20XX} % An optional date to appear under the author(s)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% DOCUMENT START
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+
+\renewcommand{\sectionmark}[1]{\markright{\spacedlowsmallcaps{#1}}} 
+\lehead{\mbox{\llap{\small\thepage\kern1em\color{halfgray} \vline}\color{halfgray}\hspace{0.5em}\rightmark\hfil}} % The header style
+
+\pagestyle{scrheadings} 
+\maketitle 
+\tableofcontents 
+\section*{Abstract} 
+
+\input{Chapters/Chapter_1.tex}
+\input{Chapters/Chapter_2.tex}
+\input{Chapters/appendix1.tex}
+
+\bibliographystyle{unsrt}
+\bibliography{bibliography.bib} % The file containing the bibliography
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
